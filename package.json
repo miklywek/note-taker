@@ -1,0 +1,23 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uniqid": "^5.4.0"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miklywek/note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miklywek/note-taker/issues"
+  },
+  "homepage": "https://github.com/miklywek/note-taker#readme"
+}
