@@ -9,10 +9,11 @@ const uniqid = require("uniqid");
 router.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "../db/db.json"));
 });
-router.post("./api.notes", (req, res) => {
+router.post("/api/notes", (req, res) => {
   let db = fs.readFile("db/db.json");
+  console.log(db);
   db = json.parse(db);
-  res.json(db);
+  console.log(db);
   let newNote = {
     id: uniqid(),
     title: req.body.title,
