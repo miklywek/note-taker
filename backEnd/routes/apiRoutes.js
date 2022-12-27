@@ -6,10 +6,10 @@ const router = require("express").Router();
 // npm package that allows for unique ids to be created
 const uniqid = require("uniqid");
 
-router.get("/api/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "../db/db.json"));
+router.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "../db/db.json"));
 });
-router.post("/api/notes", (req, res) => {
+router.post("/notes", (req, res) => {
   let db = fs.readFile("db/db.json");
   console.log(db);
   db = json.parse(db);
@@ -24,7 +24,7 @@ router.post("/api/notes", (req, res) => {
   fs.writeFileSync("db/db.json", JSON.stringify(db));
   res.json(db);
 });
-router.delete("/api/notes/:id", (req, res) => {
+router.delete("/notes/:id", (req, res) => {
   let db = JSON.parse(fs.readFile("db/db.json"));
   // removing note with id
   let deleteNotes = db.filer((item) => item.id !== req.params.id);
